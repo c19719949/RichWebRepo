@@ -1,0 +1,1 @@
+this extension changes both text and images, based on the 42, which is, obviously the meaning of life 

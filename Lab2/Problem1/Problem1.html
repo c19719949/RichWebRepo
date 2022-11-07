@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+   <meta charset="UTF-8">
+   <title>Phone Directory</title>
+   <link rel="stylesheet" href="style1.css">
+</head>
+
+
+<body>
+   <div class = "contact_section" >
+      Please enter your contact details
+        <div id="content">
+           
+           <input type="text" id = "n_input" placeholder="Name" maxlength="20" autofocus oninput="this.value = this.value.replace(/[^a-z, ^A-Z]/, '')" />
+           <input type="text" id = "m_input" placeholder="Mobile" onkeypress="return numbercheck(event)" maxlength = "10">
+           <input type="email" id = "e_input" placeholder="Email" maxlength="39">
+           <button id = "submit">Add Contact</button>
+        </div>
+
+        <div id = "error">
+         <b class = "error" id = "error1">Not All Fields Filled In</b>
+         <b class = "error" id = "error2">Mobile Number Too Short</b>
+
+
+        </div>
+   </div>
+     <div id = "search_section">
+         <input type="text" onkeypress="return numbercheck(event)" id = "searchBox" onkeyup="filter()" placeholder="Search By Mobile">
+     </div>
+
+    <div id = "display_section">
+      <table class = "sortable">
+         <thead>
+           <tr>
+             <th id="name_header">Name</th>
+             <th>Mobile</th>
+             <th>Email</th>
+           </tr>
+         </thead>
+         <tbody id = "contact_table">
+           
+         </tbody>
+         </table>
+         
+    </div>
+    <div id = "noResult">
+      <b>NO RESULT FOUND</b>
+
+    </div>
+</body>
+<script src="script1.js"></script>
+<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+</html>

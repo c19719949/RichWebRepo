@@ -1,10 +1,13 @@
-import { fromEvent } from 'rxjs';
+const {fromEvent, Subject }= 'rxjs';
 
+ 
 
+const button = document.querySelector("#greenButton");
 
-const button = document.getElementById("greenButton");
+const Observable = fromEvent(button, 'click');
 
-const Observable =  fromEvent(button, 'click');
+Observable.subscribe(x=>console.log("test"));
+
 
 
 

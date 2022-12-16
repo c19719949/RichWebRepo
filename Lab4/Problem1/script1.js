@@ -1,3 +1,13 @@
+class note extends React.Component {
+    render()
+    return(
+        <p>
+        test
+        </p>
+    );
+}
+
+
 /* COPIED FROM WEEK 1
 
 const addnote = document.querySelector("#colour");
